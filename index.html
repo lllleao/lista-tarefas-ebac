@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <section>
+        <div class="start">
+            <div class="entrada">
+                <h1>Bem-vindo(a) à sua lista de tarefas personalizada</h1>
+                <div class="img">
+                    <img src="img/todolist.png" alt="png de uma lista de tarefas">
+                </div>
+                <p>Qual é o seu nome?</p>
+                <div class="input">
+                    <form>
+                        <input type="text" placeholder="Nome" class="texto-nome" required>
+                        <button type="submit" class="btn">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <header>
+            <h1>Lista de tarefas do(a) </h1>
+        </header>
+        <main>
+            <div class="main">
+                <form>
+                    <input id="texto" type="text" placeholder="Tarefa" required>
+                    <input type="submit" class="btn" value="Cadastrar">
+                </form>
+                <div class="list">
+                    <ul class="task">
+                    </ul>
+                    <ul class="color-task">
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
