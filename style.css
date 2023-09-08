@@ -23,7 +23,7 @@ body {
     color: #fff;
 }
 
-.entrada {
+.card {
     max-width: 600px;
     max-height: 500px;
     width: 100%;
@@ -57,7 +57,7 @@ body {
 }
 
 /*IMAGEM E SUA ANIMAÇÃO*/
-.entrada img {
+.card img {
     width: 150px;
 }
 
@@ -76,7 +76,7 @@ body {
 
 /*FIM DE IMAGEM E SUA ANIMAÇÃO*/
 
-.entrada p {
+.card p {
     font-size: 27pt;
     padding-bottom: 15px;
 }
@@ -132,7 +132,7 @@ header {
     color: #fff;
 }
 
-.main {
+.toDoList {
     background-color: white;
     padding: 30px;
     width: 450px;
@@ -141,19 +141,19 @@ header {
 }
 
 /*FORMULARIO*/
-.main form {
+.toDoList form {
     display: flex;
     place-content: center;
     margin-bottom: 40px;
 }
 
-.main input {
+.toDoList input {
     padding: 8px;
     font-size: 12pt;
     border-radius: 5px;
 }
 
-.main input[type=text] {
+.toDoList input[type=text] {
     margin-right: 20px;
     border: none;
     border-bottom: 2px solid rgb(16, 121, 80);
@@ -161,7 +161,7 @@ header {
     background-color: #fff;
 }
 
-.main input[type=submit] {
+.toDoList input[type=submit] {
     border: none;
     cursor: pointer;
     background-color: #2baa60;
@@ -169,7 +169,7 @@ header {
     font-weight: bold;
 }
 
-.main input[type=submit]:hover {
+.toDoList input[type=submit]:hover {
     transform: scale(1.05);
     transition: .6s;
 }

@@ -7,19 +7,19 @@ $(document).ready(function() {
         $(`<span>${nome}</span>`).appendTo('header h1')
     })
 
-    $('.main form').on('submit', adicionar)
+    $('.toDoList form').on('submit', adicionar)
     
 
     
     function adicionar(e) {
         e.preventDefault()
 
-        const tarefa = $('.main #texto').val()
+        const tarefa = $('#text').val()
         const novoElemento = $(`<li>${tarefa}</li>`)
 
         $(novoElemento).appendTo('.task')
         
-        $('#texto').val('')
+        $('#text').val('')
 
         $(novoElemento).click(function(){
             $(novoElemento).toggleClass('linetext')
