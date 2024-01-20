@@ -139,7 +139,9 @@ const atualizarComOLocalStorage = () => {
             $(novoElemento).appendTo('.task')
             $(novoElemento).click(() => checar(novoElemento))
             
-
+            if (tarefas.estaCompleta) {
+                novoElemento.addClass('linetext')
+            }
             function checar(elemento) {
                 $(elemento).toggleClass('linetext')
                 colocarNoStorage()
