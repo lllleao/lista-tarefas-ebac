@@ -124,7 +124,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin: 100px 0;
 }
 
 header {
@@ -153,12 +153,11 @@ header {
     border-radius: 5px;
 }
 
-.toDoList input[type=text] {
+.inputUsuario {
     margin-right: 20px;
     border: none;
     border-bottom: 2px solid rgb(16, 121, 80);
     outline-color: rgb(16, 121, 80);
-    background-color: #fff;
 }
 
 .toDoList input[type=submit] {
@@ -186,13 +185,14 @@ ul {
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .task li {
     padding: 5px;
     border-bottom: 2px solid black;
     cursor: pointer;
+    height: 31.6px;
 }
 
 .task {
@@ -205,7 +205,7 @@ li {
 /*FIM DAS TAREFAS*/
 
 /*COR DE URGENCIA*/
-.color-task li {
+.local-cor {
     border-radius: 5px;
     background-color: grey;
     padding: 8px;
@@ -213,3 +213,27 @@ li {
     color: white;
 }
 /*FIM DE COR DE URGENCIA*/
+
+.error {
+    border: none;
+    border-bottom: 2px solid red;
+    outline-color: red;
+}
+
+.fa-trash-can {
+    font-size: 14.5pt;
+}
+
+.lixeira li {
+    margin-bottom: 14px;
+    margin-left: 15px;
+    background-color: #007e3f;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trigger-item {
+    display: none;
+}
