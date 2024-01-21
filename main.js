@@ -6,6 +6,14 @@ $(document).ready(function () {
         const nome = $('.texto-nome').val()
         $(`<span>${nome}</span>`).appendTo('header h1')
     })
+    
+    const botao = $('.botao-renomear')
+    botao.click(() => {
+        $('.start').css('display', 'grid')
+        $(`header h1 span`).remove()
+        $('.texto-nome').val('')
+
+    })
 
     const verificarInput = () => {
         return $(name).val().trim().length == 0
@@ -13,7 +21,6 @@ $(document).ready(function () {
 
     const verificarSeMudou = () => {
         const validaInput = verificarInput()
-
         if (!validaInput) {
             $(name).removeClass('error')
         }
@@ -96,14 +103,14 @@ $(document).ready(function () {
 const colocarNoStorage = () => {
     const elementosTarefa = document.getElementsByName('local-item')
     const elementosCor = $(`.color-task li`)
+    const valorNome = $('header h1 span').text()
 
 
     const tarefasItems = [...elementosTarefa].map((tarefaElemento) => {
         const paraFazer = tarefaElemento.innerText
         const estaCompleta = $(tarefaElemento).is('.linetext')
-        const valorNome = $('header h1 span').text()
 
-        return { paraFazer, estaCompleta, valorNome }
+        return { paraFazer, estaCompleta }
     })
 
     const tarefasCores = [...elementosCor].map((tarefaElemento) => {
@@ -120,14 +127,17 @@ const colocarNoStorage = () => {
 
 
     localStorage.setItem('tarefas', JSON.stringify(saveDaLista))
+    localStorage.setItem('cabecalho', valorNome)
 }
 
 const atualizarComOLocalStorage = () => {
     const saveLocal = JSON.parse([localStorage.getItem('tarefas')])
+    const cabecalho = localStorage.getItem('cabecalho')
+
     const start = $('.start')
     $(start).css('display', 'none')
-    $(`<span>${saveLocal[0].valorNome}</span>`).appendTo('header h1')
-    
+    $(`<span>${cabecalho}</span>`).appendTo('header h1')
+
 
 
     for (const tarefas of saveLocal) {

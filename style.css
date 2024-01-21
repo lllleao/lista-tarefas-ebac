@@ -21,6 +21,7 @@ body {
     display: grid;
     place-items: center;
     color: #fff;
+    z-index: 1;
 }
 
 .card {
@@ -236,4 +237,27 @@ li {
 
 .trigger-item {
     display: none;
+}
+
+.botao-renomear {
+    padding: 8px;
+    font-size: 1.15em;
+    border-radius: 5px;
+    margin-top: 40px;
+    background-color: rgb(29, 131, 72);
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+.botao-renomear:hover {
+    background-color: rgb(29, 131, 72);
+    transform: scale(1.05);
+    transition: .6s;
+}
+
+@media screen and (max-width: 767px) {
+    .toDoList {
+        width: 90%;
+    }
 }
