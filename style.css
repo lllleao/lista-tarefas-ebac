@@ -129,6 +129,7 @@ body {
 header {
     margin-bottom: 20px;
     color: #fff;
+    text-align: center;
 }
 
 .toDoList {
@@ -254,7 +255,7 @@ li {
     transition: .6s;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
     /*ENTRADA*/
     .card {
         width: 95vw;
@@ -262,9 +263,7 @@ li {
     }
 
     .start h2 {
-        text-transform: uppercase;
         padding-bottom: 10px;
-        text-align: center;
         font-size: 1.3em;
         line-height: 40px;
     }
@@ -286,35 +285,23 @@ li {
     .start input {
         padding: 8px;
         font-size: 1em;
-        border-radius: 5px;
-        background-color: transparent;
-        outline-style: none;
-        border: none;
-        border-bottom: 2px solid black;
     }
 
     .start .btn {
         padding: 5px;
         font-size: 1em;
-        border-radius: 5px;
-        margin-left: 50px;
-        background-color: rgb(29, 131, 72);
-        cursor: pointer;
-        border: none;
-        color: #fff;
+        
     }
     /*FIM DA ENTRADA*/
 
     .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 100px auto;
-        width: 90vw;
+        width: 100vw;
     }
 
     .toDoList {
         width: 100%;
+        margin: 0 auto;
+        padding: 15px;
     }
 
     h1 {
@@ -324,5 +311,13 @@ li {
 
     .botao-renomear {
         font-size: 1em;
+    }
+
+    .task li {
+        width: 150px;
+    }
+
+    .task {
+        margin-right: 50px;
     }
 }
