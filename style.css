@@ -134,8 +134,8 @@ header {
 
 .toDoList {
     background-color: white;
-    padding: 30px;
-    width: 450px;
+    padding: 30px 20px 30px 20px;
+    width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,0.19 );
 }
@@ -196,7 +196,7 @@ li {
 }
 
 .task {
-    margin-right: 80px;
+    margin-right: 60px;
 }
 
 .linetext {
@@ -255,7 +255,7 @@ li {
     transition: .6s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 510px) {
     /*ENTRADA*/
     .card {
         width: 95vw;
@@ -298,8 +298,12 @@ li {
         width: 100vw;
     }
 
+    main {
+        width: 90%;
+    }
+
     .toDoList {
-        width: 100%;
+        width: 100%;    
         margin: 0 auto;
         padding: 15px;
     }
@@ -314,10 +318,15 @@ li {
     }
 
     .task li {
-        width: 150px;
+        width: 200px;
+        padding: 0 0 0 5px;
+
     }
 
     .task {
-        margin-right: 50px;
+        margin-right: 40px;
+        
     }
+
+    
 }
