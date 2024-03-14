@@ -135,7 +135,7 @@ header {
 .toDoList {
     background-color: white;
     padding: 30px 20px 30px 20px;
-    width: 500px;
+    min-width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,0.19 );
 }
@@ -192,11 +192,16 @@ li {
     padding: 5px;
     border-bottom: 2px solid black;
     cursor: pointer;
-    height: 31.6px;
+    max-height: 31.6px;
+    height: 100%;
+    max-width: max-content;
 }
 
 .task {
     margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .linetext {
@@ -255,8 +260,9 @@ li {
     transition: .6s;
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 640px) {
     /*ENTRADA*/
+
     .card {
         width: 95vw;
         padding: 20px;
@@ -277,6 +283,11 @@ li {
         margin-bottom: 30px;
     }
 
+    .input form {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .card p {
         font-size: 1.6em;
         padding-bottom: 20px;
@@ -290,6 +301,7 @@ li {
     .start .btn {
         padding: 5px;
         font-size: 1em;
+        margin: 12px 0;
         
     }
     /*FIM DA ENTRADA*/
@@ -303,9 +315,17 @@ li {
     }
 
     .toDoList {
-        width: 100%;    
+        min-width: 100%;
         margin: 0 auto;
         padding: 15px;
+    }
+
+    .toDoList form {
+        flex-direction: column;
+    }
+
+    .inputUsuario {
+        margin-bottom: 12px;
     }
 
     h1 {
@@ -318,9 +338,11 @@ li {
     }
 
     .task li {
-        width: 200px;
-        padding: 0 0 0 5px;
-
+        text-align: center;
+        max-width: max-content;
+        max-height: max-content;
+        padding-left: 5px;
+        line-height: 20px;
     }
 
     .task {
